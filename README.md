@@ -1,7 +1,7 @@
 # README
 ![image](https://user-images.githubusercontent.com/97663140/161197133-fb470543-0ce9-4fb4-8479-a125896ec91b.png)
 
-# 프로젝트 주제
+# :pill:프로젝트 주제
 ### 복약방
 #### 안전한 약 복용을 위한 약 정보 & 소통 사이트
 
@@ -9,7 +9,7 @@
 - 약을 먹으면서 변화되는 증상을 다른 사람들과 나누고 싶다.
 - 폐쇄적인 부작용을 개방적으로 공유하고 싶다.
 
-## 팀원
+## :pencil2:팀원
 
 :cyclone: 김영애 (백엔드)
 
@@ -19,11 +19,11 @@
 
 :runner: 이동빈 (프론트엔드)
 
-## 프로젝트 기간
+## :alarm_clock:프로젝트 기간
 
 2022/3/28 ~ 2022/4/1
 
-## 사용 기술 스택
+## :hammer:사용 기술 스택
 
 - React
 - css
@@ -33,7 +33,7 @@
 - JPA
 - Google Cloud platform
 
-## 사전 계획
+## :black_nib: 사전 계획
 
 - 노션
 
@@ -50,7 +50,7 @@ https://ovenapp.io/view/d6XaZI0DjKuzgYnvhdzS2d8D7XGRIZ13/05y1u
 - DB ERD <br/>
 ![image](https://user-images.githubusercontent.com/97663140/161201645-3cb195b0-6330-43cc-aa46-2949d36ac5c3.png)
 
-## 기능 구현
+## :gem:기능 구현
 
 1.google cloud platform 사용 서버 구축 <br/>
 2. 약 정보 조회
@@ -61,12 +61,12 @@ https://ovenapp.io/view/d6XaZI0DjKuzgYnvhdzS2d8D7XGRIZ13/05y1u
  ![image](https://user-images.githubusercontent.com/97663140/161198755-6ab8c4f6-8a3e-4f2c-aa4d-254a4d08b67e.png)
 4.카트에 해당하는 테이블에 저장 
 
-## 깃허브 활용
+## :cat:깃허브 활용
 ![image](https://user-images.githubusercontent.com/97663140/161192761-d8c9f2c5-fb58-4e7f-9f69-4a5aa57ccf51.png)
 <br/>
 branch 등 깃허브의 여러가지 기능을 활용하여 협업을 진행하였다. 
 
-## Trouble Shooting
+## :interrobang: Trouble Shooting
 
 1. 회원가입 요청을 할 때 post요청을 보내면 CORS에러, 400, 500에러가 종류별로 떴다. 
 
@@ -77,8 +77,8 @@ branch 등 깃허브의 여러가지 기능을 활용하여 협업을 진행하�
 서버 실행후 브라우저에서 처음 검색시 데이터를 잘 받아오지만 두번째 검색시 해당 에러 발생.
 
 " java.lang.IllegalArgumentException: Parameter value [] did not match expected type [java.lang.String (n/a)] "
-
-처음 코드
+**
+처음 코드**
 
 List findByitemNameContainingOrEfcItemContaining(String itemName, String efcItem);
 
@@ -86,7 +86,7 @@ Spring에서 제공하는 findBy함수를 이용하여 실행하였지만 두번
 
 → 
 
-수정 코드
+**수정 코드**
 
 **[@query](https://github.com/query)**("select m from Medi m where m.itemName like %:itemName% or m.efcItem like %:efcItem%")
 
