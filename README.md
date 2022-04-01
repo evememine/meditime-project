@@ -47,16 +47,24 @@
 
 https://ovenapp.io/view/d6XaZI0DjKuzgYnvhdzS2d8D7XGRIZ13/05y1u
 ![image](https://user-images.githubusercontent.com/97663140/161193184-93ec8d21-2f4a-4e57-ac97-98de5f02d6a0.png)
-- DB ERD <br/>
+### DB ERD 
+<br/>
+
 ![image](https://user-images.githubusercontent.com/97663140/161201645-3cb195b0-6330-43cc-aa46-2949d36ac5c3.png)
 
 ## :gem:기능 구현
 
-### 1.google cloud platform 사용 서버 구축 <br/>
+### 1.google cloud platform 사용 서버 구축 
+ <br/>
+ 
 ### 2. 약 정보 조회
+
  ![image](https://user-images.githubusercontent.com/97663140/161197447-60320d7a-0c8e-4cee-95a6-46f5a9c1b783.png)
+ 
  ![image](https://user-images.githubusercontent.com/97663140/161197505-fbae5f70-8a91-4c5c-9d0a-86bd767b88a3.png)
+ 
  ![image](https://user-images.githubusercontent.com/97663140/161197580-92fd3918-7e29-4efa-a67f-39fcd33654ad.png)
+ 
 ### 3. 로그인/회원가입  
  ![image](https://user-images.githubusercontent.com/97663140/161198755-6ab8c4f6-8a3e-4f2c-aa4d-254a4d08b67e.png)
 ### 4.카트에 해당하는 테이블에 저장 
