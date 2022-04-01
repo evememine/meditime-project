@@ -35,7 +35,7 @@
 
 ## :black_nib: 사전 계획
 
-- 노션
+### 노션
 
 [https://successful-hydrofoil-f44.notion.site/1-8d5c1bd184d94ffe9f0fa8277a2f5820](https://www.notion.so/1-8d5c1bd184d94ffe9f0fa8277a2f5820)
 
@@ -43,7 +43,7 @@
 
 ![image](https://user-images.githubusercontent.com/97663140/161193088-e2a8a2ff-7450-4cf2-a370-64694d8da45d.png)
 <br/>
-- 카카오 오븐
+### 카카오 오븐
 
 https://ovenapp.io/view/d6XaZI0DjKuzgYnvhdzS2d8D7XGRIZ13/05y1u
 ![image](https://user-images.githubusercontent.com/97663140/161193184-93ec8d21-2f4a-4e57-ac97-98de5f02d6a0.png)
@@ -52,14 +52,14 @@ https://ovenapp.io/view/d6XaZI0DjKuzgYnvhdzS2d8D7XGRIZ13/05y1u
 
 ## :gem:기능 구현
 
-1.google cloud platform 사용 서버 구축 <br/>
-2. 약 정보 조회
+### 1.google cloud platform 사용 서버 구축 <br/>
+### 2. 약 정보 조회
  ![image](https://user-images.githubusercontent.com/97663140/161197447-60320d7a-0c8e-4cee-95a6-46f5a9c1b783.png)
  ![image](https://user-images.githubusercontent.com/97663140/161197505-fbae5f70-8a91-4c5c-9d0a-86bd767b88a3.png)
  ![image](https://user-images.githubusercontent.com/97663140/161197580-92fd3918-7e29-4efa-a67f-39fcd33654ad.png)
-3. 로그인/회원가입  
+### 3. 로그인/회원가입  
  ![image](https://user-images.githubusercontent.com/97663140/161198755-6ab8c4f6-8a3e-4f2c-aa4d-254a4d08b67e.png)
-4.카트에 해당하는 테이블에 저장 
+### 4.카트에 해당하는 테이블에 저장 
 
 ## :cat:깃허브 활용
 ![image](https://user-images.githubusercontent.com/97663140/161192761-d8c9f2c5-fb58-4e7f-9f69-4a5aa57ccf51.png)
