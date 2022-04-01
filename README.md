@@ -68,36 +68,35 @@ branch 등 깃허브의 여러가지 기능을 활용하여 협업을 진행하�
 
 ## :interrobang: Trouble Shooting
 
-1. 회원가입 요청을 할 때 post요청을 보내면 CORS에러, 400, 500에러가 종류별로 떴다. 
+### 1. 회원가입 요청을 할 때 post요청을 보내면 CORS에러, 400, 500에러가 종류별로 떴다. 
 
 → METHOD:’post’를 METHOD: ‘POST’로 고쳐주었더니 해결^^
 
-2. 약 정보 조회에서 검색이 한번밖에 안되는 오류
+### 2. 약 정보 조회에서 검색이 한번밖에 안되는 오류
 
 서버 실행후 브라우저에서 처음 검색시 데이터를 잘 받아오지만 두번째 검색시 해당 에러 발생.
 
 " java.lang.IllegalArgumentException: Parameter value [] did not match expected type [java.lang.String (n/a)] "
-**
-처음 코드**
+
+#### 처음 코드
 
 List findByitemNameContainingOrEfcItemContaining(String itemName, String efcItem);
 
 Spring에서 제공하는 findBy함수를 이용하여 실행하였지만 두번째 실행했을때 해당 키워드가 제대로 입력되지 않았다.
 
-→ 
-
-**수정 코드**
+#### 수정 코드
 
 **[@query](https://github.com/query)**("select m from Medi m where m.itemName like %:itemName% or m.efcItem like %:efcItem%")
 
 List searchMediList(**[@param](https://github.com/param)**("itemName") String itemName, **[@param](https://github.com/param)**("efcItem") String efcItem );
 
-결론 <br/>
-복잡한 쿼리문은 해당함수가 잘 인식을 못한다고 하는데 복잡한 쿼리문은 Join 정도 되어야지 복잡한 쿼리문인줄 알았다.포함 단어 찾는 조건문이 있는 쿼리문도 복잡한 쿼리문으로 포함하는가 보다.문제 생길시 빠르게 **[@query](https://github.com/query)** 사용해서 처리하면 된다.
+#### 결론
+복잡한 쿼리문은 해당함수가 잘 인식을 못한다고 하는데 복잡한 쿼리문은 Join 정도 되어야지 복잡한 쿼리문인줄 알았다.포함 단어 찾는 조건문이 있는 쿼리문도 복잡한 쿼리문으로 포함하는가 보다.문제 생길시 빠르게 **[@query](https://github.com/query)** 사용해서 처리하면 된다.
 
-주의사항<br/>쿼리문 작성시 DB 기준이 아닌 Entity 기준으로 작성해야 한다.
+##### 주의사항<br/>
+쿼리문 작성시 DB 기준이 아닌 Entity 기준으로 작성해야 한다.
 
-3. 다대다 테이블 오류
+### 3. 다대다 테이블 오류
 
 상의 하에 medicinebox에 primarykey를 사용하지 않기로 했는데 스프링에서 primarykey를 넣으라는 말만 남기고 서버를 켜주지 않았다. 
 
