@@ -56,6 +56,7 @@ https://ovenapp.io/view/d6XaZI0DjKuzgYnvhdzS2d8D7XGRIZ13/05y1u
 
 ### 1.google cloud platform 사용 서버 구축 
  <br/>
+ google cloud platform을 이용하여 mySQL 서버를 구축하였다. 프록시를 사용하여 로컬에서 값 확인 및 수정을 할 수 있는 설정을 하였다.
  
 ### 2. 약 정보 조회
 
@@ -64,11 +65,20 @@ https://ovenapp.io/view/d6XaZI0DjKuzgYnvhdzS2d8D7XGRIZ13/05y1u
  ![image](https://user-images.githubusercontent.com/97663140/161197505-fbae5f70-8a91-4c5c-9d0a-86bd767b88a3.png)
  
  ![image](https://user-images.githubusercontent.com/97663140/161197580-92fd3918-7e29-4efa-a67f-39fcd33654ad.png)
+ <br/>
+ 약 조회 화면에서는 검색창에 약 이름을 입력하면 그 이름이 포함된 의약품의 목록을 키워드를 포함한 GET요청으로 모두 불러온다. 원래는 의약품 API를 사용하려 했지만 DB를 스스로  구축했으니 활용해보자는 취지에서 약 정보를 따로 20개 정도 저장해서 불러오도록 했다. 
+ <br/>
+ 상세보기를 누르면 약에 대한 상세한 정보들을 확인할 수 있고, 다시 접을 수도 있다.
  
 ### 3. 로그인/회원가입  
  ![image](https://user-images.githubusercontent.com/97663140/161198755-6ab8c4f6-8a3e-4f2c-aa4d-254a4d08b67e.png)
-### 4.카트에 해당하는 테이블에 저장 
+ 회원가입은 POST로 이루어지며, 아이디는 중복확인이 가능하게 하였다. 비밀번호와 이메일도 조건에 맞지 않으면 회원가입을 할 수 없도록 하는 로직을 추가하였다. 
 
+로그인을 유지시키기 위해서 세션 스토리지를 이용해 회원 아이디를 저장해서 이용하였다. 로그아웃하면 아이디가 지워지게 된다. 
+### 4.카트에 해당하는 테이블에 저장 
+ ![image](https://user-images.githubusercontent.com/97663140/161197580-92fd3918-7e29-4efa-a67f-39fcd33654ad.png)
+ <br/>
+상세보기 옆의 추가를 클릭하면 자신이 현재 로그인한 아이디와 약품 이름을 POST 요청으로 서버에 보낸다. 이는 사용자와 약을 연결하는 테이블에 저장된다. 
 ## :cat:깃허브 활용
 ![image](https://user-images.githubusercontent.com/97663140/161192761-d8c9f2c5-fb58-4e7f-9f69-4a5aa57ccf51.png)
 <br/>
@@ -108,4 +118,4 @@ List searchMediList(**[@param](https://github.com/param)**("itemName") String it
 
 상의 하에 medicinebox에 primarykey를 사용하지 않기로 했는데 스프링에서 primarykey를 넣으라는 말만 남기고 서버를 켜주지 않았다. 
 
-→ 데이터베이스 테이블인 edicinebox에 primarykey를 다시 추가하여 진행하여서 해결하였다.
+→ 데이터베이스 테이블인 medicinebox에 primarykey를 다시 추가하여 진행하여서 해결하였다.
